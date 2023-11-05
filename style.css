@@ -19,7 +19,7 @@ htm,body{
 }
 .main-body
 {
-    height:451px;
+    height:460px;
     width: 300px;
     background-color: rgb(0, 0, 0);
 }
@@ -28,8 +28,8 @@ htm,body{
     color:white;
     font-family: "Courier New", Courier, monospace;
     width: 100%;
-    font-size: 50px;
-    padding:10px 5px;
+    font-size: 40px;
+    padding:20px 5px;
     text-align: right;
     background-color:#000000;
     
@@ -41,12 +41,12 @@ htm,body{
     flex-grow: 1;
     height: 75px;
     justify-content: space-between ;
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid black;
     
 }
 .c-button.button
 {
-    width: 49.76%;
+    width: 49.8%;
 }
 .button
 {
@@ -60,7 +60,7 @@ htm,body{
 }
 .zero
 {
-    width: 74.7%;
+    width: 74.8%;
 }
 .button:last-child
 {
