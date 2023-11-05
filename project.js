@@ -1,5 +1,9 @@
- let button=document.querySelector(".button");
 
- let screen=document.querySelector(".screen");
+function mainFunction() {
+    let allButton = document.querySelector(".allbutton");
+    allButton.addEventListener("click",function (event) {
 
- 
+        
+
+    });
+}

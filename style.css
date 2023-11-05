@@ -40,13 +40,13 @@ htm,body{
     flex-wrap: wrap;
     flex-grow: 1;
     height: 75px;
-    justify-content: space-evenly ;
-    border-bottom: 1px solid black;
+    justify-content: space-between ;
+    border-bottom: 2px solid black;
     
 }
 .c-button.button
 {
-    width: 49.8%;
+    width: 49.76%;
 }
 .button
 {
@@ -60,7 +60,7 @@ htm,body{
 }
 .zero
 {
-    width: 74.5%;
+    width: 74.7%;
 }
 .button:last-child
 {
