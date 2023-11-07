@@ -4,6 +4,9 @@
 //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 let update = "0";
+let runningTotal=0;
+
+let PreviousOperator=null;
 
 let screen = document.querySelector(".screen");
 //this function work for manipulate the number and symbol form HTML
@@ -17,6 +20,52 @@ function buttonClick(value) {
     //we put this function here because if any one click the any button that mean's he or she want to see the number in screen
     updateScreen();
 }
+
+function doingMath(value)
+{
+    //in this function mean's the second number for math operation.
+  
+    if(PreviousOperator==="+")
+    {
+       runningTotal+=value;
+       
+    }
+    else if(PreviousOperator==="-")
+    {
+       runningTotal-=value;
+    }
+    else if(PreviousOperator==="×")
+    {
+       runningTotal*=value;
+    }
+    else if(PreviousOperator==="÷")
+    {
+       runningTotal/=value;
+    }
+}
+
+ function handleMath(value){
+
+    if(screen==="0")
+    {
+        return;
+    }
+    
+    const tempUpdate=parseInt(update);
+   
+    if(runningTotal===0)
+    {
+        runningTotal=tempUpdate; 
+    }
+    else
+    {
+        doingMath(tempUpdate);
+       
+    }
+    PreviousOperator=value;//Tracking the operator after take first the number for math operation
+    update="0";
+    console.log(runningTotal);
+ }
 
 //in this function we work with numbers
 function forNumber(value) {
@@ -32,7 +81,16 @@ function forSymbol(value) {
             update = "0";
             break; //this is break statement.
         case "=":
-            console.log("this is equal");
+            if(PreviousOperator===null)
+            {
+                return;
+            }
+            doingMath(parseInt(update));
+            
+            PreviousOperator=null;
+            update=""+runningTotal;
+            runningTotal=0;
+            
             break;
         case "←":
             if(update.length===1)
@@ -43,11 +101,12 @@ function forSymbol(value) {
             {
                 update=update.substring(0,update.length-1);
             }
+            break;
         case "+":
-               
         case "-":
         case "×":
         case "÷":
+            handleMath(value)
             break;
     }
 }
