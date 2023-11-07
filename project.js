@@ -1,5 +1,5 @@
 //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-// Hey this Arman i'm doing this Calculator(clone) Project for enhance my html,css and js knowledge.
+// Hey this abdulawularman i'm doing this Calculator(clone) Project for enhance my html,css and js knowledge.
 // i tried my best to describe the important portion of this js code.
 //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
