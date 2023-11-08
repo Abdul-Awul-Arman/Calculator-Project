@@ -42,6 +42,11 @@ function doingMath(value)
     {
        runningTotal/=value;
     }
+    else if(PreviousOperator==="P")
+    {
+        //this power function
+       runningTotal=Math.pow(runningTotal,value);
+    }
 }
 
  function handleMath(value){
@@ -64,7 +69,7 @@ function doingMath(value)
     }
     PreviousOperator=value;//Tracking the operator after take first the number for math operation
     update="0";
-    console.log(runningTotal);
+    
  }
 
 //in this function we work with numbers
@@ -106,6 +111,8 @@ function forSymbol(value) {
         case "-":
         case "×":
         case "÷":
+        case "P":
+            console.log(value);
             handleMath(value)
             break;
     }
